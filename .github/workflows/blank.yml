@@ -30,4 +30,4 @@ jobs:
         with:
           name: policies
           path: |
-            Policies
+            Policies/*.xml
