@@ -25,6 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
+      - uses: lindluni/actions-variable-groups@v1.0.0
+        with:
+          org: WhoIAM-Development
+          repo: WhoIAMB2CPolicyGitHub
+          groups: |
+            Variables/DevVars.yml
+      - name: Print Environment
+        run: env | sort
+      
       - uses: cschleiden/replace-tokens@v1
         with:
           tokenPrefix: '{Settings:'
