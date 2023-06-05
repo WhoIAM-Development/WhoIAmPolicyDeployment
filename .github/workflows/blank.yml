@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 env:
-  artifactName: ${{GITHUB_REF_NAME}}_Policy_ArtifactName
+  artifactName:${{github.ref}}_Policy_ArtifactName
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
