@@ -45,6 +45,6 @@ jobs:
       - name: Archive artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ${{vars.Policy_ArtifactName}}
+          name: ${{vars.${{vars.GITHUB_BASE_REF}}_Policy_ArtifactName}}
           path: |
             Policies/*.xml
