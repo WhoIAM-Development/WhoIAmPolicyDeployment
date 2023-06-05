@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  artifactName: ${vars.GITHUB_BASE_REF}_Policy_ArtifactName
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -45,6 +48,6 @@ jobs:
       - name: Archive artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ${{vars.${{vars.GITHUB_BASE_REF}}_Policy_ArtifactName}}
+          name: ${artifactName}
           path: |
             Policies/*.xml
