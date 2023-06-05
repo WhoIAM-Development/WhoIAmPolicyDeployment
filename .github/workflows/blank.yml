@@ -28,7 +28,7 @@ jobs:
       - uses: lindluni/actions-variable-groups@v1.0.0
         with:
           org: WhoIAM-Development
-          repo: WhoIAMB2CPolicyGitHub
+          repo: WhoIAmPolicyDeployment
           groups: |
             Variables/DevVars.yml
       - name: Print Environment
