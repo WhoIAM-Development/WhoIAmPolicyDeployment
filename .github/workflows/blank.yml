@@ -34,6 +34,18 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      - uses: actions/checkout@v3
+        with:
+          repository: WhoIAM-Development/WhoIAmB2CLocalizationTool
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: localizationTool
+          path: |
+            *    
+            
       - uses: actions/checkout@v3
       
       # - uses: lindluni/actions-variable-groups@v1.0.0
