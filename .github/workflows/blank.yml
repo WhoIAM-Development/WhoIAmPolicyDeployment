@@ -14,7 +14,8 @@ on:
   workflow_dispatch:
 
 env:
-  artifactName: echo ${{ vars.${{ github.ref_name }}_Policy_ArtifactName }}
+  # vars.${{ github.ref_name }}_Policy_ArtifactName 
+  artifactName: ${{ format('{0}_Policy_ArtifactName', github.ref_name) }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
